@@ -10,10 +10,7 @@ class LaunchViewController: UIViewController {
         view.addSubview(logoImage)
         view.addSubview(loadingImage)
         logoImage.image = UIImage(named: "Logo")
-//        logoImage.frame = CGRect(x: 34, y: 97, width: 312, height: 104)
-        
         loadingImage.image = UIImage(named: "Loading component")
-//        loadingImage.frame = CGRect(x: 81, y: 347, width: 200, height: 200)
         addConstraints()
         navigationItem.hidesBackButton = true
     }
@@ -43,7 +40,7 @@ class LaunchViewController: UIViewController {
             
             loadingImage.widthAnchor.constraint(equalToConstant: 210),
             loadingImage.heightAnchor.constraint(equalToConstant: 210),
-            loadingImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 357),
+            loadingImage.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 126),
             loadingImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 91),
 
         ])
